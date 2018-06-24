@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="http://ok57eh7z3.bkt.clouddn.com/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="http://ok57eh7z3.bkt.clouddn.com/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,Android," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="其实写了以后可能也不会看，但还是动手敲一遍加深印象吧…… Java的基本概念环境变量通常指在操作系统中用来制定操作系统运行时所需要的一些参数，通常为一系列键值对。 Path环境变量操作系统外部命令搜索路径。如用命令行执行ipconfig命令时，实际上是运行系统文件夹中的”ipconfig.exe”，找到系统文件夹中的”ipconfig.exe”文件并将其改名为”iconfig.exe”时，再次在命">
+<meta name="keywords" content="Java,Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java4Android学习笔记（未完待续）">
+<meta property="og:url" content="https://homelynerd.github.io/2017/06/23/Java4Android学习笔记/index.html">
+<meta property="og:site_name" content="Weo Wang的地洞">
+<meta property="og:description" content="其实写了以后可能也不会看，但还是动手敲一遍加深印象吧…… Java的基本概念环境变量通常指在操作系统中用来制定操作系统运行时所需要的一些参数，通常为一系列键值对。 Path环境变量操作系统外部命令搜索路径。如用命令行执行ipconfig命令时，实际上是运行系统文件夹中的”ipconfig.exe”，找到系统文件夹中的”ipconfig.exe”文件并将其改名为”iconfig.exe”时，再次在命">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-03T13:40:10.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java4Android学习笔记（未完待续）">
+<meta name="twitter:description" content="其实写了以后可能也不会看，但还是动手敲一遍加深印象吧…… Java的基本概念环境变量通常指在操作系统中用来制定操作系统运行时所需要的一些参数，通常为一系列键值对。 Path环境变量操作系统外部命令搜索路径。如用命令行执行ipconfig命令时，实际上是运行系统文件夹中的”ipconfig.exe”，找到系统文件夹中的”ipconfig.exe”文件并将其改名为”iconfig.exe”时，再次在命">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://homelynerd.github.io/2017/06/23/Java4Android学习笔记/"/>
+
+
+
+
+
+  <title>Java4Android学习笔记（未完待续） | Weo Wang的地洞</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Weo Wang的地洞</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">技术总结、读书笔记和一些碎碎念。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://homelynerd.github.io/2017/06/23/Java4Android学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weo Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weo Wang的地洞">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java4Android学习笔记（未完待续）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T05:18:33+08:00">
+                2017-06-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>其实写了以后可能也不会看，但还是动手敲一遍加深印象吧……</p>
+<h1 id="Java的基本概念"><a href="#Java的基本概念" class="headerlink" title="Java的基本概念"></a>Java的基本概念</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><p>通常指在操作系统中用来制定操作系统运行时所需要的一些参数，通常为一系列键值对。</p>
+<h3 id="Path环境变量"><a href="#Path环境变量" class="headerlink" title="Path环境变量"></a><code>Path</code>环境变量</h3><p>操作系统外部命令搜索路径。如用命令行执行<code>ipconfig</code>命令时，实际上是运行系统文件夹中的”ipconfig.exe”，找到系统文件夹中的”ipconfig.exe”文件并将其改名为”iconfig.exe”时，再次在命令行中运行<code>ipconfig</code>命令时将会报错，操作系统是如何找到”ipconfig.exe”这个文件的呢？本机通过环境变量设置界面找到<code>Path</code>这个环境变量的值为（为便于阅读进行了换行）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\Oracle\Java\javapath;</span><br><span class="line">C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;</span><br><span class="line">C:\Program Files (x86)\Intel\iCLS Client\;</span><br><span class="line">C:\Program Files\Intel\iCLS Client\;</span><br><span class="line">%SystemRoot%\system32;%SystemRoot%;</span><br><span class="line">%SystemRoot%\System32\Wbem;</span><br><span class="line">...//（略）</span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br><span class="line">D:\Android\android-sdk_r24.4.1-windows\android-sdk-windows\platform-tools;</span><br><span class="line">D:\git\Git\cmd;</span><br><span class="line">D:\node\</span><br></pre></td></tr></table></figure></p>
+<p>可以看出基本上都是文件路径，当我们在命令行里执行一个命令时，会先在<code>Path</code>环境变量中的目录里逐条查找，本机中的目录为以上代码块中的第五行。当逐条查找目录仍未找到”ipconfig.exe”文件时，命令行将会报错，如“某命令不是内部或外部命令，也不是可运行的程序或批处理文件”。总结来说，要成功运行<code>ipconfig</code>命令，”ipconfig.exe”所在的文件夹的路径必须出现在<code>Path</code>这个环境变量中。因此代码块中倒数第五行即为执行Java命令所需要的路径，在Java安装路径（本机为<code>C:\Program Files\Java\jdk1.8.0_112</code>）中的<code>bin</code>文件夹下，有着一系列Java命令所对应的，后缀为”.exe”的文件（如”java.exe”、”javac.exe”）。<br><a id="more"></a> </p>
+<h3 id="CLASSPATH环境变量"><a href="#CLASSPATH环境变量" class="headerlink" title="CLASSPATH环境变量"></a><code>CLASSPATH</code>环境变量</h3><p>类文件搜索路径，它的值如下所示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.;</span><br><span class="line">%JAVA_HOME%\lib\dt.jar;</span><br><span class="line">%JAVA_HOME%\lib\tools.jar</span><br></pre></td></tr></table></figure></p>
+<p>当我们执行<code>java Hello</code>命令来运行”Hello.class”这个文件时，”Hello.class”文件需要到哪里来寻找呢？在<code>CLASSPATH</code>这个环境变量中可以找到答案，代码块第一行中的”.;”表示的便是当前运行命令的文件路径，”Hello.class”便处于当前运行命令的文件夹中，寻找以”.class”结尾的类文件。</p>
+<h2 id="JDK中有些什么"><a href="#JDK中有些什么" class="headerlink" title="JDK中有些什么"></a>JDK中有些什么</h2><ul>
+<li>“bin”文件夹：大多数为可执行文件（用得最多的两个可执行文件为”java.exe”和”javac.exe”）。</li>
+<li>“demo”与”sample”文件夹：一些Java的范例，但对于初学者指导意义不大。</li>
+<li>“include”文件夹：一些C语言程序。</li>
+<li>“jre”文件夹：见下文。</li>
+<li>“lib”文件夹：Java所需要的一些包文件。</li>
+<li>“src.zip”：JDK的一部分源文件。</li>
+</ul>
+<h2 id="JRE是什么"><a href="#JRE是什么" class="headerlink" title="JRE是什么"></a>JRE是什么</h2><p>指Java运行环境，全程Java Runtime Environment，主要包括以下几个部分：</p>
+<ul>
+<li>Java虚拟机，即JVM(Java Virtual Machine)，是一个由软件虚拟出来的计算机。虚拟机首先将程序编译后的文件（”.class”文件）解释成适合当前操作系统的机器码，操作系统再将机器码交由硬件执行。同样的”.class”文件可交由不同虚拟机去解释成适合不同操作系统运行的机器码。Java虚拟机的存在使得相同的Java程序不需要做任何改动就能在不同的操作系统上运行。</li>
+<li>Java平台核心类文件</li>
+<li>其他支持文件</li>
+</ul>
+<hr>
+<h1 id="Java的变量"><a href="#Java的变量" class="headerlink" title="Java的变量"></a>Java的变量</h1><h2 id="什么是变量"><a href="#什么是变量" class="headerlink" title="什么是变量"></a>什么是变量</h2><ul>
+<li>计算机是一种极度精确的机器；</li>
+<li>要将信息存储在计算机中，必须指明信息存储位置与所需内存空间；</li>
+<li>在Java中，通过使用声明语句完成上述任务。</li>
+</ul>
+<h2 id="变量的声明"><a href="#变量的声明" class="headerlink" title="变量的声明"></a>变量的声明</h2><p><code>int age = 20;</code><br>“int”确定了数据类型，”age”确定了变量名，”=”为赋值号，”20”为变量值，”;”表示语句结束。这条语句使计算机分配足够空间用于存储一个整数，整数的名字为”age”，”int”是Java定义的一种数据类型，专门用于存储一定大小的整数。整个语句的意思是将赋值号右侧的值赋给赋值号左边的变量。</p>
+<h2 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">                                    |-整数类型(`byte`,`short`,`int`,`long`)</span><br><span class="line">                           |-数值型-|</span><br><span class="line">                          |         |-浮点类型(`float`,`double`)</span><br><span class="line">           |-基本数据类型-|---字符型(char)</span><br><span class="line">          |               | </span><br><span class="line">         |                 |-布尔型(boolean)</span><br><span class="line">数据类型-|</span><br><span class="line">         |                 |-类(class)</span><br><span class="line">          |               |</span><br><span class="line">           |-引用数据类型-|---接口(interface)</span><br><span class="line">                          |</span><br><span class="line">                           |-数组</span><br></pre></td></tr></table></figure>
+<h2 id="变量的命名规范"><a href="#变量的命名规范" class="headerlink" title="变量的命名规范"></a>变量的命名规范</h2><h3 id="变量命名语法规范"><a href="#变量命名语法规范" class="headerlink" title="变量命名语法规范"></a>变量命名语法规范</h3><ul>
+<li>应以字母、下划线或美元符开头（如声明变量<code>int 1age = 20;</code>中的<code>1age</code>是不合法的）；</li>
+<li>后跟字母、下划线、美元符或数字；</li>
+<li>Java的变量名没有长度限制（最好不要太长）；</li>
+<li>Java的变量名对大小写敏感（如<code>int age = 20;</code>与<code>int Age = 20;</code>两个声明语句中的<code>age</code>与<code>Age</code>是两个不同的变量）。</li>
+</ul>
+<h3 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h3><ul>
+<li>变量名应使用有意义的英文单词（忌用拼音）；</li>
+<li>变量名若只有一个单词，则所有字母小写；</li>
+<li>变量名若由多个英文单词构成，则从第二个单词开始首字母大写。</li>
+</ul>
+<hr>
+<h1 id="Java的基本数据类型"><a href="#Java的基本数据类型" class="headerlink" title="Java的基本数据类型"></a>Java的基本数据类型</h1><h2 id="布尔型变量-boolean"><a href="#布尔型变量-boolean" class="headerlink" title="布尔型变量(boolean)"></a>布尔型变量(boolean)</h2><ul>
+<li>boolean类型适用于逻辑运算，一般用于程序流程控制；</li>
+<li>在Java中boolean类型只有两种取值：true与false，如<code>boolean b = false;</code>（注意，Java中不能用0和非0、空和非空来表示！需要与JavaScript这种动态类型的语言区分开）；</li>
+</ul>
+<h2 id="字符型变量-char"><a href="#字符型变量-char" class="headerlink" title="字符型变量(char)"></a>字符型变量(char)</h2><p>用来表示通常意义上的字符。</p>
+<ul>
+<li>字符是由单引号括起来的单个字符，如<code>char c = &#39;a&#39;</code>；</li>
+<li>Java字符使用Unicode字符集；<br>先介绍ASCII字符集：</li>
+<li>在计算机中，所有的数据都需要使用二进制来表示；</li>
+<li>类似a,b,c一类的字母无法直接用二进制表示；</li>
+<li>所以将常用符号进行了编号，标准ASCII码使用7位二进制数来表示字符；</li>
+<li>7位二进制数可以表示所有的数字、大小写字母以及一些常见符号（如！、@、#、$等等）。<br>Unicode字符集则为每种语言的每个字符设定了统一且唯一的二进制码：</li>
+<li>Unicode满足了跨语言文本转换和处理的需求；</li>
+<li>Unicode在互联网中扮演着相当重要的角色；</li>
+<li>Unicode使用数字0-0x10FFFF来表示字符；</li>
+<li>Unicode字符集最多允许有1114112个字符。</li>
+</ul>
+<p>注意，在Unicode字符集中，一个英文字母与一个汉字所占用的存储空间都是一样的，不存在一个中文字符占用的两个字符，一个英文字符占用一个字符。<br>Java在设计初期就考虑到该语言将广泛应用于互联网中，因此设计者们选用了Unicode字符集，方便Java在互联网中运用，所以类似<code>char c  = &#39;中&#39;;</code>这样的语句是合法的。<br>实际编程中遇到了问题，使用javac命令在命令行中编译.java文件时，命令行报错：“错误: 编码GBK的不可映射字符”。解决方案：用记事本打开文件后选择另存为，在“编码”选项中选择”ANSI”，这样就能顺利编译。<br>测试程序：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">charTest</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">char</span> c = <span class="string">'汉'</span>;</span><br><span class="line">		System.out.println(c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="数值型变量"><a href="#数值型变量" class="headerlink" title="数值型变量"></a>数值型变量</h2><p>主要分为两大类。</p>
+<h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><ul>
+<li><code>byte</code>-比特型</li>
+<li><code>short</code>-短整型</li>
+<li><code>int</code>-整型</li>
+<li><code>long</code>-长整型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">占用存储空间</th>
+<th style="text-align:center">表示数的范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>byte</code></td>
+<td style="text-align:center">1字节</td>
+<td style="text-align:center">-128~127</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>short</code></td>
+<td style="text-align:center">2字节</td>
+<td style="text-align:center">-2^15~2^15-1</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>int</code></td>
+<td style="text-align:center">4字节</td>
+<td style="text-align:center">-2^31~2^31-1</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>long</code></td>
+<td style="text-align:center">8字节</td>
+<td style="text-align:center">-2^63~2^63-1</td>
+</tr>
+</tbody>
+</table>
+<p>整数类型通常有三种表示形式：</p>
+<ul>
+<li>十进制整数，如12，-314，0；</li>
+<li>八进制整数，要求以0开头，如012；</li>
+<li>十六进制，要求0x或0X开头，如0x12。<br>Java语言的整型常量默认为<code>int</code>型，如<code>int i = 3;</code>。<br>声明长整型常量(long) 可以后加’l’或’L’，如<code>long l = 3L;</code>（最好大写，防止被看作数字1）。</li>
+</ul>
+<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><ul>
+<li><code>float</code>-单精度浮点型</li>
+<li><code>double</code>-双精度浮点型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">占用存储空间</th>
+<th style="text-align:center">表示数的范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>float</code></td>
+<td style="text-align:center">4字节</td>
+<td style="text-align:center">-3.403E38~3.403E38</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>double</code></td>
+<td style="text-align:center">8字节</td>
+<td style="text-align:center">-1.798E308~1.798E308</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="练习题（一）"><a href="#练习题（一）" class="headerlink" title="练习题（一）"></a>练习题（一）</h1><h2 id="创建一个Java源文件，命名为”Exerc01-java”，在主函数中创建一个boolean类型的变量，并为这个变量赋值（true，false和0），然后将这个变量打印出来。"><a href="#创建一个Java源文件，命名为”Exerc01-java”，在主函数中创建一个boolean类型的变量，并为这个变量赋值（true，false和0），然后将这个变量打印出来。" class="headerlink" title="创建一个Java源文件，命名为”Exerc01.java”，在主函数中创建一个boolean类型的变量，并为这个变量赋值（true，false和0），然后将这个变量打印出来。"></a>创建一个Java源文件，命名为”Exerc01.java”，在主函数中创建一个<code>boolean</code>类型的变量，并为这个变量赋值（true，false和0），然后将这个变量打印出来。</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exerc01</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="comment">//boolean b = true;</span></span><br><span class="line">		<span class="comment">//boolean b = false;</span></span><br><span class="line">		<span class="keyword">boolean</span> b = <span class="number">0</span>;</span><br><span class="line">		System.out.println(b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="创建一个Java源文件，命名为”Exerc02-java”，在主函数中创建一个char类型的变量，并为这个变量赋值（中文或英文字符），-然后将这个变量打印出来。"><a href="#创建一个Java源文件，命名为”Exerc02-java”，在主函数中创建一个char类型的变量，并为这个变量赋值（中文或英文字符），-然后将这个变量打印出来。" class="headerlink" title="创建一个Java源文件，命名为”Exerc02.java”，在主函数中创建一个char类型的变量，并为这个变量赋值（中文或英文字符）， 然后将这个变量打印出来。"></a>创建一个Java源文件，命名为”Exerc02.java”，在主函数中创建一个<code>char</code>类型的变量，并为这个变量赋值（中文或英文字符）， 然后将这个变量打印出来。</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exerc02</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="comment">//char c = 'a';</span></span><br><span class="line">		<span class="keyword">char</span> c = <span class="string">'汉'</span>;</span><br><span class="line">		System.out.println(c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="创建一个Java源文件，命名为”Exerc03-java”，在主函数中创建所有数值型变量，并赋值，-然后进行加减乘除运算。"><a href="#创建一个Java源文件，命名为”Exerc03-java”，在主函数中创建所有数值型变量，并赋值，-然后进行加减乘除运算。" class="headerlink" title="创建一个Java源文件，命名为”Exerc03.java”，在主函数中创建所有数值型变量，并赋值， 然后进行加减乘除运算。"></a>创建一个Java源文件，命名为”Exerc03.java”，在主函数中创建所有数值型变量，并赋值， 然后进行加减乘除运算。</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exerc03</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">byte</span> b = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">short</span> s = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">long</span> l = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">float</span> f = <span class="number">0.1F</span>;</span><br><span class="line">		<span class="keyword">double</span> d = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">//i = l;</span></span><br><span class="line">		<span class="comment">//System.out.println(b);</span></span><br><span class="line">		<span class="comment">//int j = 0.5*10;</span></span><br><span class="line">		<span class="keyword">double</span> j = <span class="number">0.5</span>*<span class="number">10</span>;</span><br><span class="line">		<span class="keyword">byte</span> k = (<span class="keyword">byte</span>)(b + <span class="number">200</span>);</span><br><span class="line">		System.out.println(k);<span class="comment">//输出为一个很奇怪的值：-56</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>字面量：表示代码中一个变量字面上的值，其整数均为整型，其小数部分均为双精度浮点型。<br>在代码<code>float f = 0.1;</code>中，将一个双精度浮点型字面量(<code>double</code>)赋给了一个单精度浮点型变量(<code>float</code>)，双精度浮点型变量的表数范围比单精度浮点型变量的表数范围要大，因此程序可能报错（如，从大桶向小桶中倒水，若大桶中水的体积大于小桶的容积，水会溢出）。可用<code>float f = 0.1F;</code>强制转换。整型(<code>int</code>)、长整型(<code>long</code>)与短整型(<code>short</code>)之间的关系同理。<br>代码<code>byte b = 0;</code>与<code>short s = 0;</code>将整型的字面量赋给了比特型变量与短整型变量，按常理来说应该会像上述情况一样报错，但实际不会，因为在Java中，可以使用整型的字面量给比特型变量与短整型变量赋值。代码<code>int j = 0.5 * 10;</code>编译报错，是因为0.5这个字面量，整数部分是整型，小数部分是双精度浮点型，双精度浮点型的字面量与任何其他数值型的字面量进行四则运算，其结果都为双精度浮点型，总结来说就是四则运算结果的类型以参与运算的字面量中表数范围最大的字面量为准，因此代码<code>double j = 0.5 * 10;</code>不会报错，而代码<code>byte k = b + 0;</code>则会报错，原因是运算结果的类型应为参与运算字面量中表数范围最大的字面量的类型，即整型，<code>int k = b + 0;</code>则不会报错。另外强制转换也可以避免类型问题，但可能使代码存在不可预知的错误。<br>数值型变量的表数范围关系：byte &lt; short &lt; int &lt; long &lt; double</p>
+<hr>
+<h1 id="Java的运算符与表达式"><a href="#Java的运算符与表达式" class="headerlink" title="Java的运算符与表达式"></a>Java的运算符与表达式</h1><h2 id="Java中的常见运算符及其使用方法"><a href="#Java中的常见运算符及其使用方法" class="headerlink" title="Java中的常见运算符及其使用方法"></a>Java中的常见运算符及其使用方法</h2><h3 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h3><p><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>++</code>, <code>--</code></p>
+<ul>
+<li><p>有代码<code>int i = 3 / 2;</code>，将变量i打印出来，发现结果是1，原因是四则运算结果的类型以参与的运算字面量中表数范围最大的字面量为准，即整型，因此小数位全部被忽略。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="comment">//int i = 3 / 2;</span></span><br><span class="line">        <span class="keyword">double</span> i = <span class="number">3</span> / <span class="number">2.0</span>;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>i++</code>与<code>++i</code>的区别：<code>i++</code>是先让i参与运算，再使i增加1；<code>++i</code>是先让i增加1，再让i参与运算。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="comment">//int i = 5;</span></span><br><span class="line">        <span class="comment">//int j = i++ +5;</span></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">        int k = i + 5;</span></span><br><span class="line"><span class="comment">        i = i + 1;</span></span><br><span class="line"><span class="comment">        **/</span></span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">int</span> j = ++i +<span class="number">5</span>;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">        i = i + 1;</span></span><br><span class="line"><span class="comment">        int k = i + 5;</span></span><br><span class="line"><span class="comment">        **/</span></span><br><span class="line">        System.out.println(j);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">        <span class="comment">//int j = 6;</span></span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">5</span>;</span><br><span class="line">        <span class="comment">//boolean b = i &gt; j;</span></span><br><span class="line">        <span class="keyword">boolean</span> b = i == j;</span><br><span class="line">        System.out.println(b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="布尔逻辑运算符"><a href="#布尔逻辑运算符" class="headerlink" title="布尔逻辑运算符"></a>布尔逻辑运算符</h3><p><code>!</code>, <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>&amp;&amp;</code>, <code>||</code><br>真值表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">!a</th>
+<th style="text-align:center">a&amp;b</th>
+<th style="text-align:center">a&#124;b</th>
+<th style="text-align:center">a^b</th>
+<th style="text-align:center">a&amp;&amp;b</th>
+<th style="text-align:center">a&#124;&#124;b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">true</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td style="text-align:center">true</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td style="text-align:center">false</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>!</code> - 逻辑非， 将布尔变量<code>a</code>取反；</li>
+<li><code>&amp;</code> - 逻辑与。<code>a&amp;b</code>中的两个布尔变量只要一个为假，则运算结果为假。</li>
+<li><code>|</code> - 逻辑或。<code>a|b</code>中的两个布尔变量只要一个为真，则运算结果为真。</li>
+<li><code>^</code> - 逻辑异或。 </li>
+<li><code>&amp;&amp;</code> - 短路与。<code>a&amp;&amp;b</code>中的a若为真，则继续判断b为真还是假，若b为真，则结果为真，若b为假，则结果为假；a若为假，则不再判断b是否真假，结果为假。</li>
+<li><code>||</code> - 短路或，<code>a||b</code>中的a若为假，则继续判断b为真还是假，若b为真，则结果为真，若b为假，则结果为假；a若为真，则不再判断b是否真假，结果为真。</li>
+</ul>
+<p><code>&amp;</code>与<code>&amp;&amp;</code>（<code>|</code>与<code>||</code>）的区别：<br><code>&amp;</code>与<code>&amp;&amp;</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="comment">//boolean a = true;</span></span><br><span class="line">        <span class="comment">//boolean b = false;</span></span><br><span class="line">        <span class="comment">//boolean c = a &amp; b;</span></span><br><span class="line">        <span class="comment">//boolean d = a &amp;&amp; b;//常规判断时与和短路与用法基本相同</span></span><br><span class="line">        <span class="comment">//System.out.println(c);</span></span><br><span class="line">        <span class="comment">//System.out.println(d);</span></span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">        <span class="comment">//boolean e = i &gt; 6 &amp; i++ &gt; 7;//false与上false，结果即为flase</span></span><br><span class="line">		<span class="comment">//System.out.println(i);结果为6，i增加了1</span></span><br><span class="line">		<span class="keyword">boolean</span> e = i &gt; <span class="number">6</span> &amp;&amp; i++ &gt; <span class="number">7</span>;<span class="comment">//false短路与上false，结果即为flase</span></span><br><span class="line">		System.out.println(e);<span class="comment">//结果为5，i没有变化，因为短路与先判断前一个条件`i &gt; 6`是否为假，如果为假，则后一个条件不用再去判断，因此`i++`并未被执行，i未增加1  </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>|</code>与<code>||</code>的区别可以此类推。</p>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p><code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&gt;&gt;</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;&gt;</code></p>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p><code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>（后四个为拓展赋值运算符）<br><code>+=</code>:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">    i += <span class="number">5</span>;<span class="comment">//即为i = i + 5    </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其他拓展赋值运算符以此类推。</p>
+<h3 id="字符串连接运算符"><a href="#字符串连接运算符" class="headerlink" title="字符串连接运算符"></a>字符串连接运算符</h3><p><code>+</code></p>
+<h2 id="表达式的类型和值"><a href="#表达式的类型和值" class="headerlink" title="表达式的类型和值"></a>表达式的类型和值</h2><p>表达式，是符合一定语法规则的运算符与操作符的序列，如<code>i</code>、<code>10.5 + i</code>、<code>(i + j) - 2</code>。</p>
+<h3 id="表达式的值"><a href="#表达式的值" class="headerlink" title="表达式的值"></a>表达式的值</h3><p>对表达式的中操作数进行运算得到的结果，称之为表达式的值。</p>
+<h3 id="表达式的类型"><a href="#表达式的类型" class="headerlink" title="表达式的类型"></a>表达式的类型</h3><p>表达式的值的数据类型，即为表达式的类型。</p>
+<hr>
+<h1 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h1><h2 id="程序运行流程的分类"><a href="#程序运行流程的分类" class="headerlink" title="程序运行流程的分类"></a>程序运行流程的分类</h2><h3 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h3><p>代码一行一行向下执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语句1-&gt;语句2-&gt;语句3</span><br></pre></td></tr></table></figure></p>
+<h3 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h3><p>设定条件，符合条件时程序才继续执行，否则不执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语句1</span><br><span class="line">  |      假</span><br><span class="line">判断语句-----</span><br><span class="line">  |真       |</span><br><span class="line">语句3      语句4</span><br></pre></td></tr></table></figure></p>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><p>程序从头运行到位后再从头开始。</p>
+<h2 id="if…else…分支结构"><a href="#if…else…分支结构" class="headerlink" title="if…else…分支结构"></a>if…else…分支结构</h2><h3 id="（一）"><a href="#（一）" class="headerlink" title="（一）"></a>（一）</h3><p>语法结构：<br>if(布尔类型表达式){<br>    语句1;<br>    语句2;<br>}<br>语句3;<br>语句4；</p>
+<p>示例代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">12</span>;</span><br><span class="line">		<span class="keyword">if</span>(i &lt;= <span class="number">10</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">"i小于等于10。"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="（二）"><a href="#（二）" class="headerlink" title="（二）"></a>（二）</h3><p>语法结构：<br>if(布尔类型表达式){<br>    语句1;<br>    语句2;<br>}<br>else{<br>    语句3;<br>    语句4;<br>}</p>
+<p>示例代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">12</span>;</span><br><span class="line">		<span class="keyword">if</span>(i &lt;= <span class="number">10</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">"i小于等于10。"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"i大于10。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="（三）"><a href="#（三）" class="headerlink" title="（三）"></a>（三）</h3><p>语法结构：<br>if(布尔类型表达式){<br>    语句1;<br>    语句2;<br>}<br>else if{<br>    语句3;<br>    语句4;<br>}<br>else if{<br>    语句5;<br>    语句6;<br>}<br>else{<br>    语句7;<br>    语句8;<br>}<br>注意，最后的<code>else{}</code>是可有可无的。</p>
+<p>示例代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(i &lt; <span class="number">0</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">"i为负数。"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"i为正数。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意，以下代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(i &lt; <span class="number">0</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">"i为负数。"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i++ &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"i+1的值大于0"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"i既不为负数也不大于-1。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其输出结果为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i为负数</span><br><span class="line">-1</span><br></pre></td></tr></table></figure></p>
+<p>这说明无论<code>else if{}</code>语句有多少个，只要第一个<code>else if{}</code>语句为真，之后的<code>else if{}</code>语句便不再执行；若第一个<code>else if{}</code>语句为假，则执行后一个<code>else if{}</code>语句，直到该<code>else if{}</code>语句为真。我们把以上代码做少许修改<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(i++ &gt; <span class="number">0</span>)&#123;</span><br><span class="line">		    System.out.println(<span class="string">"i+1的值大于0"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"i为负数。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"i既不为负数也不大于-1。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其输出结果为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i既不为负数也不大于-1。</span><br><span class="line">0</span><br></pre></td></tr></table></figure></p>
+<p>变量i的值变成了0而不是-1，说明<code>i++</code>这个语句被执行了。</p>
+<h2 id="switch分支结构"><a href="#switch分支结构" class="headerlink" title="switch分支结构"></a>switch分支结构</h2><p>语法结构：<br>switch(表达式){ //注意此处表达式并不是布尔型表达式<br>    case 常量1:<br>            语句1;<br>            break;<br>    case  常量2:<br>            语句2;<br>            break;<br>    …<br>    default:<br>            默认语句;<br>            break;<br>}<br><code>default:</code>部分同样可以省略。值得注意的是，<code>switch()</code>和<code>case ***:</code>中的表达式类型不能为布尔类型，只能为这四种类型：<code>byte</code>, <code>short</code>, <code>int</code>, <code>char</code>。<br>PS:新版JDK中还支持字符串类型（<code>String</code>）。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">char</span> c = <span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">switch</span>(c)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">                System.out.println(<span class="string">'a'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">                System.out.println(<span class="string">'b'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">                System.out.println(<span class="string">'c'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">'d'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>break;</code>的作用是让代码不再向下执行，<code>default:</code>中的<code>break;</code>在最后，可以省略。</p>
+<hr>
+<h1 id="练习题（二）"><a href="#练习题（二）" class="headerlink" title="练习题（二）"></a>练习题（二）</h1><h2 id="将学生分数按照标准分为优、良、中、差四个级别。"><a href="#将学生分数按照标准分为优、良、中、差四个级别。" class="headerlink" title="将学生分数按照标准分为优、良、中、差四个级别。"></a>将学生分数按照标准分为优、良、中、差四个级别。</h2><p>步骤：<br>1.创建一个名为Test01的类；<br>2.在Test01类当中加入主函数；<br>3.在主函数中定义一个整型变量用于表示学生分数；<br>4.使用if…else…结构对分数进行分级。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="comment">//int score = 90;</span></span><br><span class="line">        <span class="comment">//int score = 61;</span></span><br><span class="line">        <span class="keyword">int</span> score = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(score &gt; <span class="number">85</span> &amp;&amp; score &lt;= <span class="number">100</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"High Distinction"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(score &gt; <span class="number">75</span> &amp;&amp; score &lt;= <span class="number">85</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Distinction"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(score &gt; <span class="number">60</span> &amp;&amp; score &lt;= <span class="number">75</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Credit Pass"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(score &gt;= <span class="number">0</span> &amp;&amp; score &lt;= <span class="number">60</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Pass"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"Error"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="猜拳游戏。"><a href="#猜拳游戏。" class="headerlink" title="猜拳游戏。"></a>猜拳游戏。</h2><p>步骤：<br>1.创建一个名为Test02的类；<br>2.在Test02类当中加入主函数；<br>3.在主函数中定义两个char类型变量，分别代表两个玩家的出拳；<br>4.使用if…else…结构对结果进行判断。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test02</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="comment">//s - 石头(shitou)，j - 剪刀(jiandao)，b - 布(bu)</span></span><br><span class="line">        <span class="keyword">int</span> player1 = <span class="string">'s'</span>;</span><br><span class="line">        <span class="keyword">int</span> player2 = <span class="string">'j'</span>;</span><br><span class="line">        <span class="keyword">if</span>(player1 == <span class="string">'s'</span> &amp;&amp; player2 == <span class="string">'s'</span> )&#123;</span><br><span class="line">            System.out.println(<span class="string">"Equalize."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'j'</span> &amp;&amp; player2 == <span class="string">'j'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Equalize."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'b'</span> &amp;&amp; player2 == <span class="string">'b'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Equalize."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'s'</span> &amp;&amp; player2 == <span class="string">'j'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Player1 wins."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'s'</span> &amp;&amp; player2 == <span class="string">'b'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Player2 wins."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'j'</span> &amp;&amp; player2 == <span class="string">'s'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Player2 wins."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'j'</span> &amp;&amp; player2 == <span class="string">'b'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Player1 wins"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'b'</span> &amp;&amp; player2 == <span class="string">'s'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Player1 wins"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(player1 == <span class="string">'b'</span> &amp;&amp; player2 == <span class="string">'j'</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Player2 wins"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"Error!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1><h2 id="循环结构-1"><a href="#循环结构-1" class="headerlink" title="循环结构"></a>循环结构</h2><p>在不少实际问题中有许多具有规律性的重复操作，因此在程序中就需要重复执行某些语句。一组被重复执行的语句称之为循环体，能否继续重复，决定循环的终止条件。循环结构是在一定条件下反复执行某段程序的流程结构，被反复执行的程序被称为循环体。循环语句是由循环体及循环的终止条件两部分组成的。</p>
+<h2 id="for循环语句"><a href="#for循环语句" class="headerlink" title="for循环语句"></a>for循环语句</h2><p>举例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFor</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Ready to get into loop."</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)&#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"Loop ends."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Ready to get into loop.</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">Loop ends.</span><br></pre></td></tr></table></figure></p>
+<h2 id="while循环语句"><a href="#while循环语句" class="headerlink" title="while循环语句"></a>while循环语句</h2><p>举例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestWhile</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; <span class="number">10</span>)&#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="练习题（三）"><a href="#练习题（三）" class="headerlink" title="练习题（三）"></a>练习题（三）</h1><h2 id="打印出100-200之间所有的素数。"><a href="#打印出100-200之间所有的素数。" class="headerlink" title="打印出100-200之间所有的素数。"></a>打印出100-200之间所有的素数。</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestPrimeNumber</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">100</span>; i &lt;= <span class="number">200</span>; i++)&#123;</span><br><span class="line">			<span class="keyword">boolean</span> f = <span class="keyword">false</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt; i; j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(i % j == <span class="number">0</span>)&#123;</span><br><span class="line">					f = <span class="keyword">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(f == <span class="keyword">false</span>)&#123;</span><br><span class="line">				System.out.println(i);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">101</span><br><span class="line">103</span><br><span class="line">107</span><br><span class="line">109</span><br><span class="line">113</span><br><span class="line">127</span><br><span class="line">131</span><br><span class="line">137</span><br><span class="line">139</span><br><span class="line">149</span><br><span class="line">151</span><br><span class="line">157</span><br><span class="line">163</span><br><span class="line">167</span><br><span class="line">173</span><br><span class="line">179</span><br><span class="line">181</span><br><span class="line">191</span><br><span class="line">193</span><br><span class="line">197</span><br><span class="line">199</span><br></pre></td></tr></table></figure></p>
+<h2 id="在命令行中打印出一个由“-”组成的四层金字塔。"><a href="#在命令行中打印出一个由“-”组成的四层金字塔。" class="headerlink" title="在命令行中打印出一个由“*”组成的四层金字塔。"></a>在命令行中打印出一个由“*”组成的四层金字塔。</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Prymaid</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">4</span>-i; k++)&#123;</span><br><span class="line">				System.out.print(<span class="string">" "</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= i; j++)&#123;</span><br><span class="line">				System.out.print(<span class="string">"* "</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(<span class="string">""</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   *</span><br><span class="line">  * *</span><br><span class="line"> * * *</span><br><span class="line">* * * *</span><br></pre></td></tr></table></figure></p>
+<h2 id="思考，如何打印出任意行数的金字塔？"><a href="#思考，如何打印出任意行数的金字塔？" class="headerlink" title="思考，如何打印出任意行数的金字塔？"></a>思考，如何打印出任意行数的金字塔？</h2><p>待续。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/06/写在二十二岁生日的最后一刻/" rel="next" title="写在二十二岁生日的最后一刻">
+                <i class="fa fa-chevron-left"></i> 写在二十二岁生日的最后一刻
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/17/洛神赋/" rel="prev" title="洛神赋">
+                洛神赋 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Weo Wang" />
+            
+              <p class="site-author-name" itemprop="name">Weo Wang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HomelyNerd" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/u/1657940882" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/weiyouwangHY" target="_blank" title="Facebook">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>Facebook</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/homelynerd/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          <!--网易云音乐-->
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=539603870&auto=1&height=66"></iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java的基本概念"><span class="nav-number">1.</span> <span class="nav-text">Java的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量"><span class="nav-number">1.1.</span> <span class="nav-text">环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Path环境变量"><span class="nav-number">1.1.1.</span> <span class="nav-text">Path环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CLASSPATH环境变量"><span class="nav-number">1.1.2.</span> <span class="nav-text">CLASSPATH环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK中有些什么"><span class="nav-number">1.2.</span> <span class="nav-text">JDK中有些什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JRE是什么"><span class="nav-number">1.3.</span> <span class="nav-text">JRE是什么</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java的变量"><span class="nav-number">2.</span> <span class="nav-text">Java的变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是变量"><span class="nav-number">2.1.</span> <span class="nav-text">什么是变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的声明"><span class="nav-number">2.2.</span> <span class="nav-text">变量的声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的类型"><span class="nav-number">2.3.</span> <span class="nav-text">变量的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的命名规范"><span class="nav-number">2.4.</span> <span class="nav-text">变量的命名规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量命名语法规范"><span class="nav-number">2.4.1.</span> <span class="nav-text">变量命名语法规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#驼峰命名法"><span class="nav-number">2.4.2.</span> <span class="nav-text">驼峰命名法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java的基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">Java的基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔型变量-boolean"><span class="nav-number">3.1.</span> <span class="nav-text">布尔型变量(boolean)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符型变量-char"><span class="nav-number">3.2.</span> <span class="nav-text">字符型变量(char)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值型变量"><span class="nav-number">3.3.</span> <span class="nav-text">数值型变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数类型"><span class="nav-number">3.3.1.</span> <span class="nav-text">整数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点类型"><span class="nav-number">3.3.2.</span> <span class="nav-text">浮点类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习题（一）"><span class="nav-number">4.</span> <span class="nav-text">练习题（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个Java源文件，命名为”Exerc01-java”，在主函数中创建一个boolean类型的变量，并为这个变量赋值（true，false和0），然后将这个变量打印出来。"><span class="nav-number">4.1.</span> <span class="nav-text">创建一个Java源文件，命名为”Exerc01.java”，在主函数中创建一个boolean类型的变量，并为这个变量赋值（true，false和0），然后将这个变量打印出来。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个Java源文件，命名为”Exerc02-java”，在主函数中创建一个char类型的变量，并为这个变量赋值（中文或英文字符），-然后将这个变量打印出来。"><span class="nav-number">4.2.</span> <span class="nav-text">创建一个Java源文件，命名为”Exerc02.java”，在主函数中创建一个char类型的变量，并为这个变量赋值（中文或英文字符）， 然后将这个变量打印出来。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个Java源文件，命名为”Exerc03-java”，在主函数中创建所有数值型变量，并赋值，-然后进行加减乘除运算。"><span class="nav-number">4.3.</span> <span class="nav-text">创建一个Java源文件，命名为”Exerc03.java”，在主函数中创建所有数值型变量，并赋值， 然后进行加减乘除运算。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java的运算符与表达式"><span class="nav-number">5.</span> <span class="nav-text">Java的运算符与表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的常见运算符及其使用方法"><span class="nav-number">5.1.</span> <span class="nav-text">Java中的常见运算符及其使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算数运算符"><span class="nav-number">5.1.1.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关系运算符"><span class="nav-number">5.1.2.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔逻辑运算符"><span class="nav-number">5.1.3.</span> <span class="nav-text">布尔逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算符"><span class="nav-number">5.1.4.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值运算符"><span class="nav-number">5.1.5.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串连接运算符"><span class="nav-number">5.1.6.</span> <span class="nav-text">字符串连接运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式的类型和值"><span class="nav-number">5.2.</span> <span class="nav-text">表达式的类型和值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式的值"><span class="nav-number">5.2.1.</span> <span class="nav-text">表达式的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式的类型"><span class="nav-number">5.2.2.</span> <span class="nav-text">表达式的类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分支语句"><span class="nav-number">6.</span> <span class="nav-text">分支语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序运行流程的分类"><span class="nav-number">6.1.</span> <span class="nav-text">程序运行流程的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序结构"><span class="nav-number">6.1.1.</span> <span class="nav-text">顺序结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支结构"><span class="nav-number">6.1.2.</span> <span class="nav-text">分支结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环结构"><span class="nav-number">6.1.3.</span> <span class="nav-text">循环结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if…else…分支结构"><span class="nav-number">6.2.</span> <span class="nav-text">if…else…分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（一）"><span class="nav-number">6.2.1.</span> <span class="nav-text">（一）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（二）"><span class="nav-number">6.2.2.</span> <span class="nav-text">（二）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（三）"><span class="nav-number">6.2.3.</span> <span class="nav-text">（三）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch分支结构"><span class="nav-number">6.3.</span> <span class="nav-text">switch分支结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习题（二）"><span class="nav-number">7.</span> <span class="nav-text">练习题（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将学生分数按照标准分为优、良、中、差四个级别。"><span class="nav-number">7.1.</span> <span class="nav-text">将学生分数按照标准分为优、良、中、差四个级别。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#猜拳游戏。"><span class="nav-number">7.2.</span> <span class="nav-text">猜拳游戏。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环语句"><span class="nav-number">8.</span> <span class="nav-text">循环语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#循环结构-1"><span class="nav-number">8.1.</span> <span class="nav-text">循环结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环语句"><span class="nav-number">8.2.</span> <span class="nav-text">for循环语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环语句"><span class="nav-number">8.3.</span> <span class="nav-text">while循环语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习题（三）"><span class="nav-number">9.</span> <span class="nav-text">练习题（三）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#打印出100-200之间所有的素数。"><span class="nav-number">9.1.</span> <span class="nav-text">打印出100-200之间所有的素数。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在命令行中打印出一个由“-”组成的四层金字塔。"><span class="nav-number">9.2.</span> <span class="nav-text">在命令行中打印出一个由“*”组成的四层金字塔。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思考，如何打印出任意行数的金字塔？"><span class="nav-number">9.3.</span> <span class="nav-text">思考，如何打印出任意行数的金字塔？</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Weo Wang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261155640&web_id=1261155640" language="JavaScript"></script>
+  </div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
